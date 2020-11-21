@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yBw-JX-IGA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="519"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-CD-efm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-BY-wA0">
+                                        <rect key="frame" x="0.0" y="173" width="414" height="173"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ya-HG-yJ3">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="173"/>
+                                                <state key="normal" title="Soft"/>
+                                                <connections>
+                                                    <action selector="eggButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRD-M1-Hid"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-J7-7BC">
+                                                <rect key="frame" x="138" y="0.0" width="138" height="173"/>
+                                                <state key="normal" title="Medium"/>
+                                                <connections>
+                                                    <action selector="eggButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Vr-ax-TkC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1A-xr-hGy">
+                                                <rect key="frame" x="276" y="0.0" width="138" height="173"/>
+                                                <state key="normal" title="Hard"/>
+                                                <connections>
+                                                    <action selector="eggButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdH-bV-ORK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SF-Y3-8ZD">
+                                        <rect key="frame" x="0.0" y="346" width="414" height="173"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ioP-HY-yws">
+                                                <rect key="frame" x="0.0" y="85.5" width="414" height="2"/>
+                                            </progressView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ioP-HY-yws" firstAttribute="centerX" secondItem="8SF-Y3-8ZD" secondAttribute="centerX" id="1BJ-A1-Kzz"/>
+                                            <constraint firstAttribute="trailing" secondItem="ioP-HY-yws" secondAttribute="trailing" id="FFc-v7-auG"/>
+                                            <constraint firstItem="ioP-HY-yws" firstAttribute="centerY" secondItem="8SF-Y3-8ZD" secondAttribute="centerY" id="OIL-jG-fvT"/>
+                                            <constraint firstItem="ioP-HY-yws" firstAttribute="leading" secondItem="8SF-Y3-8ZD" secondAttribute="leading" id="Qlk-pK-ytR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yBw-JX-IGA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="409-Uu-3MT"/>
+                            <constraint firstItem="yBw-JX-IGA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EqF-Y1-bzN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yBw-JX-IGA" secondAttribute="trailing" id="c3J-k9-bnk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="EggLabel" destination="hJo-CD-efm" id="gqj-T2-Ziw"/>
+                        <outlet property="progressBar" destination="ioP-HY-yws" id="nnT-d6-AXJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
